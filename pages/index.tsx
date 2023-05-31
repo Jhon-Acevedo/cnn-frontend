@@ -5,19 +5,19 @@ import Header from "../components/Header";
 import UploadImage from "../components/UploadImage";
 import Result from "../components/Result";
 import Footer from "../components/Footer";
-import {useState} from "react";
+import { useState } from "react";
 
 type Res = {
-  predict:string,
-  value:number
+  predict: string,
+  value: number
 }
 export default function Home() {
 
-  const [name, setName] = useState('Esperando imágen...')
+  const [name, setName] = useState('...')
   const [value, setValue] = useState('')
-  const predictName = async (res:Res) => {
+  const predictName = async (res: Res) => {
     await setName(res.predict);
-    await setValue(""+res.value);
+    await setValue("" + res.value);
   }
   return (
     <div className={styles.container}>
@@ -27,10 +27,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Header/>
-        <UploadImage predictedValue={predictName}/>
-        <Result name={name} value={value}/>
-        <Footer/>
+        <Header />
+        <div id="contenedor">
+          <Result name={name} value={value} />
+          <UploadImage predictedValue={predictName} />
+        </div>
+        <Footer />
       </main>
     </div>
   )

@@ -14,7 +14,8 @@ type ob = {
 
 export default function UploadImage({predictedValue}: props) {
     const [isLoading, setIsLoading] = useState(false)
-    const [img, setImg] = useState<string>('/img/default_img.svg')
+    const [img, setImg] = useState<string>('/img/upload_png.png')
+    // const [img, setImg] = useState<string>('/img/default_img.svg')
     const [text, setText] = useState('Ingrese una imagen para predecir')
 
     useEffect(() => {
@@ -47,8 +48,10 @@ export default function UploadImage({predictedValue}: props) {
     });
 
     return (
-        <div className={styles.box}>
-            <Image src={img} alt="image" width={text === '' ? 250 : 100} height={text === '' ? 250 : 100}/>
+        <div className={styles.upload}>
+            {/* <Image src={img} alt="image" width={text === '' ? 250 : 100} height={text === '' ? 250 : 100}/> */}
+            {/* cargar imagen upload_png */}
+            <Image src={img} alt="image" width={text === '' ? 300 : 200} height={text === '' ? 300 : 200}/>
             <p id={"text-img"} className={styles.textWeak}>{text}</p>
 
             <label htmlFor="file-upload" className={styles.custom_file_upload}>

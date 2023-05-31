@@ -11,7 +11,7 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  /*border-top: 1px solid #eaeaea;*/
   justify-content: center;
   align-items: center;
 }
@@ -130,7 +130,7 @@
   justify-content: center;
   text-align: center;
   color: #eaeaea;
-  background: #346d76;
+  background: #212529;
   font-size: .6rem;
   padding: 0 1rem;
   margin-bottom: 5rem;
@@ -150,13 +150,13 @@
 
 
 .custom_file_upload:hover{
-  background: #1a8c99;
+  background: #7b8997;
   cursor: pointer;
 }
 
 .custom_file_upload {
   padding: 0.6rem 1.4rem;
-  background: #346d76;
+  background: #212529;
   border: none;
   color: #ffffff;
   font-weight: bold;
@@ -174,7 +174,7 @@
 }
 
 .textStrong {
-  color: #127382;
+  color: #212529;
   font-size: 1.5rem;
   font-weight: bolder;
   margin: .8rem;
@@ -183,8 +183,16 @@
 .centeredText {
   text-align: center;
   color: #000;
-  font-size: .8rem;
+  font-size: 14px;
   margin:  0 2rem;
   bottom: 1rem;
+  margin-top: 40px;
+}
+
+.upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
