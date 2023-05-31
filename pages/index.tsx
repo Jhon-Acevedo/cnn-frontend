@@ -13,7 +13,7 @@ type Res = {
 }
 export default function Home() {
 
-  const [name, setName] = useState('...')
+  const [name, setName] = useState('No se tiene categoria')
   const [value, setValue] = useState('')
   const predictName = async (res: Res) => {
     await setName(res.predict);
